@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="sv" data-v="__VERSION__">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>MGP Search</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1><a href="index.html">MGP Search</a></h1>
+  <p class="sub">Sök efter ord eller fraser från MGP-avsnitt.</p>
+</header>
+<main>
+<form id="form" role="search">
+  <label for="q" class="sr">Sökord</label>
+  <input id="q" type="search" placeholder="Sök…" autocomplete="off" autofocus>
+  <p class="hint">Sökningen matchar delar av ord. Använd citattecken för att söka "exakt".</p>
+</form>
+<p id="status" aria-live="polite"></p>
+<div id="graph" hidden></div>
+<ol id="results"></ol>
+<button id="more" hidden>Visa fler</button>
+</main>
+<script type="module" src="search.js"></script>
+</body>
+</html>

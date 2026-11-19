@@ -1,0 +1,66 @@
+{
+  "music görnings podcaster": [
+    "music journalist podcast",
+    "music journalist podcaster",
+    "music journals podcast",
+    "music journalists podcast",
+    "music onions podcast",
+    "music yearnings-prodcaster",
+    "music yearnings-podcaster",
+    "Music Johnny's Podcaster"
+  ],
+  "music görnings!": [
+    "music journal!"
+  ],
+  "Armann": [
+    "Arman",
+    "Armand",
+    "Harman"
+  ],
+  "Armanns": [
+    "Armans",
+    "Armands"
+  ],
+  "Hreinsson": [
+    "Reinson",
+    "Reinsson",
+    "Herenson",
+    "Rejnsson",
+    "Herreinsson",
+    "Herreinson",
+    "Rehnson",
+    "Henson",
+    "Heinsson",
+    "Hereniusson",
+    "Hereniuson",
+    "Henrainsson",
+    "Harénsson",
+    "Herreynsson"
+  ],
+  "Hreinssons": [
+    "Reinsons",
+    "Herensons",
+    "Herreinsons"
+  ],
+  "Sture Bergwalls Orkester": [
+    "sturebergas orkester",
+    "sturebergs orkester"
+  ],
+  "fitta": [
+      "f*tta"
+  ],
+  "fuck": [
+      "f*ck"
+  ],
+  "stalkad": [
+      "stakad"
+  ],
+  "_substitutions": {
+    "&amp;": "&",
+    "&gt;": ">",
+    "&lt;": "<",
+    "&nbsp;": " ",
+    "<i>": "*",
+    "</i>": "*"
+  }
+}

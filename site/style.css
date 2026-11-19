@@ -1,0 +1,35 @@
+:root { color-scheme: light dark; --bg: #fff; --fg: #1d1d1f; --muted: #6b6b73; --accent: #0b5fff; --hl: #ffe58a; --line: #e2e2e6; }
+@media (prefers-color-scheme: dark) { :root { --bg: #16161a; --fg: #e8e8ec; --muted: #9a9aa5; --accent: #7aa7ff; --hl: #5c4a00; --line: #2c2c33; } }
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 52rem; padding: 1rem; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h1 { font-size: 1.6rem; }
+.sr { position: absolute; left: -9999px; }
+#q { width: 100%; padding: .7rem .9rem; font-size: 1.1rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--bg); color: var(--fg); }
+#status, .meta { color: var(--muted); }
+#graph { margin: 1rem 0; }
+.graph { width: 100%; height: auto; display: block; }
+.graph line { stroke: var(--line); }
+.graph text { fill: var(--muted); font-size: 11px; }
+.graph a rect { fill: var(--accent); }
+.graph a rect:hover { opacity: .75; }
+.ep { display: inline-block; margin-right: .5rem; padding: .05rem .45rem .15rem; border-radius: .35rem; background: #5f6b7a; color: #fff; font-size: .85em; font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (prefers-color-scheme: dark) { .ep { background: #46505e; } }
+#results { list-style: none; padding: 0; }
+.result { margin: 1.2rem 0; }
+.result h2 { font-size: 1.1rem; margin: 0 0 .3rem; }
+.result small { color: var(--muted); font-weight: normal; }
+.result ul { list-style: none; padding: 0 0 0 .8rem; margin: 0; border-left: 2px solid var(--line); }
+.result li a { color: var(--fg); display: block; padding: .15rem 0; }
+.ts { color: var(--muted); font-variant-numeric: tabular-nums; font-size: .85em; }
+mark { background: var(--hl); color: inherit; border-radius: 2px; }
+button { padding: .5rem 1rem; font-size: 1rem; }
+.page header { display: flex; justify-content: space-between; }
+#transcript p { margin: .35rem 0; }
+#transcript p:target { background: var(--hl); border-radius: 4px; outline: 6px solid var(--hl); }
+header h1 { margin-bottom: .2rem; }
+header h1 a { color: inherit; }
+.sub { margin: 0 0 1rem; font-size: 1.1rem; color: var(--fg); }
+.hint { margin: .35rem .2rem 0; font-size: .7rem; line-height: 1.35; color: var(--muted); opacity: .85; }
+.hint code { font-size: inherit; }

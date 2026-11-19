@@ -1,0 +1,48 @@
+name: Build and deploy search site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'output/**'
+      - 'site/**'
+      - 'scripts/**'
+      - 'tests/**'
+      - 'package.json'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch: # manual rebuild from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Add "[skip pages]" to a commit message to skip a rebuild.
+    if: github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip pages]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npm test # also performs a full build into dist/
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5
